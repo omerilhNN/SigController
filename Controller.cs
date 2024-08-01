@@ -39,7 +39,7 @@ class Controller
                 FreeConsole();
                 if (AttachConsole((uint)firstProcessId))
                 {
-                    bool result = GenerateConsoleCtrlEvent(CTRL_BREAK_EVENT, 0);
+                    bool result = GenerateConsoleCtrlEvent(CTRL_BREAK_EVENT, (uint)firstProcessId);
 
                     if (result)
                     {
